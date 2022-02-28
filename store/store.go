@@ -64,7 +64,7 @@ func Createemployee(emp Employee, db *sql.DB) (int64, error) {
 	return int64(id), nil
 }
 
-//function for updating values of  existing employees
+//function for updating values of  existing employee
 
 func Employeeupdate(emp Employee, db *sql.DB) error {
 	_, err := db.Exec("UPDATE employee SET Name = ?, Email=?, Role=? WHERE ID = ?",
